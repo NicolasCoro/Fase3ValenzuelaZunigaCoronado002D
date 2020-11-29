@@ -7,8 +7,13 @@ urlpatterns=[
     path('Pasajes/', views.Pasajes, name='Pasajes'),
     path('lista/', views.ReservaListView.as_view(), name='reserva_list'),
     path('<int:pk>/', views.ReservaDetailView.as_view(), name='reserva_detail'),
-]
+   
     
+    
+
+]
+
+   
     
 
 urlpatterns+=[

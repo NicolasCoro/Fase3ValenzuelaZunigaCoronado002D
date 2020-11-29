@@ -28,6 +28,7 @@ def Pasajes(request):
     )
 
 
+
 class ReservaListView(generic.ListView):
     model= Reserva
     paginate_by=10

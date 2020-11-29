@@ -18,8 +18,8 @@
   <a href="{% url 'logout' %}">Cerrar sesion</a>
   <div class="usuario_">
   <a class="boton" style="color: green;" href="{% url 'signup' %}">Crear usuarios</a>
-  <a style="color: green;" href="">Administrar usuarios</a>
   </div>
+  
 {% elif user.is_authenticated %}
   <p class="si">Estas registrado como: {{user.username}}  </p>
   <a href="{% url 'logout' %}">Cerrar sesion</a>
