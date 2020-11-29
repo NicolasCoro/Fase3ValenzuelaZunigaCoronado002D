@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+<div class="full-screen">
+<img src="{% static 'css/img/avion.jpg' %}" alt="avion">
+    <div class="formu">
+        <h1>Login</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="boton" type="submit">Crear usuario</button>
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

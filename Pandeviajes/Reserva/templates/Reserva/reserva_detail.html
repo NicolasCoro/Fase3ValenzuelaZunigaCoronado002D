@@ -1,0 +1,40 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/Estilos5.css' %}">
+
+
+<div id="formulario">
+    {% if user.is_superuser %}
+    <h1>Detalle de la reserva</h1>
+    <h1 style="color: yellow;" >Administrador</h1>
+    <h4>Cliente que reserva: {{reserva.nombres}} </h4>
+    <p>Rut: {{reserva.rut}} </p>
+    <p>Edad: {{reserva.edad}}</p>
+    <p>cantidad de pasajes: {{reserva.cantP}}</p>
+    <p>Telefono: {{reserva.telef}}</p>
+    <p>Destino: {{reserva.destinos}}</p>
+    
+    <a class="controls" href="{%url 'reserva_update' pk=reserva.pk %}">Actualizar reserva</a>
+    <a class="controls" href="{%url 'reserva_delete' pk=reserva.pk %}">Eliminar reserva</a>
+    <a class="controls" href="{% url 'reserva_list' %}">Atras</a>
+    
+    {% else %}
+
+    <h1>Detalle de tu reserva</h1>
+    <h4>Cliente que reserva: {{reserva.nombres}} </h4>
+    <p>Rut: {{reserva.rut}} </p>
+    <p>Edad: {{reserva.edad}}</p>
+    <p>cantidad de pasajes: {{reserva.cantP}}</p>
+    <p>Telefono: {{reserva.telef}}</p>
+    <p>Destino: {{reserva.destinos}}</p>
+    <a class="controls" href="{%url 'reserva_update' pk=reserva.pk %}">Actualizar reserva</a>
+    <a class="controls" href="{%url 'reserva_delete' pk=reserva.pk %}">Eliminar reserva</a>
+    <a class="controls" href="{% url 'reserva_list' %}">Atras</a>    
+    
+        
+
+    {% endif %}
+</div>
+{% endblock %}

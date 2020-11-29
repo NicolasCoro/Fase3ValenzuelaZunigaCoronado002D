@@ -1,0 +1,47 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Estilos5.css' %}">
+    <div id="formulario">
+    {% if user.is_superuser %}
+        <h1>Listado de reservas</h1>
+        <h2 style="color: yellow;">Administrador</h2>
+        {% if reserva_list %}
+        <ul>
+            {% for reserva in reserva_list %}
+            <li>
+                <a href="{{ reserva.get_absolute_url }}">{{ reserva.nombres }}</a>
+                <p>Rut: {{reserva.rut}}</p>
+            </li>
+            {% endfor %}
+        {% else %}
+            <p style="color: red; font-size: 25px;"> No hay reservas en la empresa PandeViajes.</p>
+        
+        {% endif %}    
+        </ul>
+    {% elif user.is_authenticated %}
+        <h1>Actualizar o eliminar</h1>
+        <p style="color: red;">Si usted actualiza o elimina
+            una reserva que no es suya
+            sera bloqueado de la aerolinea de por vida  </p>
+        {% if reserva_list %}
+        <ul>
+            {% for reserva in reserva_list %}
+            <li>
+            <a href="{{ reserva.get_absolute_url }}">{{ reserva.nombres }}</a>
+            <p>Rut: {{reserva.rut}}</p>
+            </li>
+            {% endfor %}
+        {% else %}
+            <p style="color: red; font-size: 25px;"> No tienes reservas </p>
+        
+        {% endif %}
+        </ul>
+
+    {% else %}
+        <p style="color: red; font-size: 25px;"> Usted no deberia estar aca, esta haciendo trampa :O</p>
+        
+    {% endif %}
+    </div>
+{% endblock %}

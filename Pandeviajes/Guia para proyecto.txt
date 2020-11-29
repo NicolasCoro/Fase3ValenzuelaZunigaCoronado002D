@@ -1,0 +1,33 @@
+Para entrar a la pagina de inicio:
+http://127.0.0.1:8000/Reserva/
+
+para entrar a la lista de las reservas:
+http://127.0.0.1:8000/Reserva/reserva/
+
+Para entrar al detalle de la reserva seleccionada: 
+http://127.0.0.1:8000/Reserva/reserva/(numero de reserva)/
+
+para entrar a crear el formulario:
+http://127.0.0.1:8000/Reserva/reserva/create/
+
+para entra a actualizar una reserva:
+http://127.0.0.1:8000/Reserva/reserva/(numero de reserva)/update
+
+para eliminar una reserva:
+http://127.0.0.1:8000/Reserva/reserva/(numero de reserva)/delete
+
+para hacer el test debe estar en(manage.py):
+\Desktop\Pandeviajes\Fase2ValenzuelaZunigaCoronado002D\Pandeviajes>
+
+y agregar el  py manage.py test
+
+
+
+admin:
+Usuario: Nicolas
+Contrasena: nico123
+
+
+
+
+

@@ -1,0 +1,116 @@
+ /* Home*/ 
+*
+{
+margin:0;
+padding:0;
+
+
+}
+
+.full-screen{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.full-screen video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    z-index: -1;
+    
+
+}
+
+.bienvenida{
+    display:block ;
+    opacity: 0.8;
+    background-color: black;
+    border-radius: 20px;
+    padding-top: 20px;
+    
+    
+}
+.bienvenida h1{
+    color: white;
+    margin: 50px;
+    font-size: 150px;
+   
+    
+}
+.no{
+    color: red;
+    margin: 50px;
+    font-size: 50px;
+    display: inline-block;
+}
+.bienvenida a{
+    font-size:35px ;
+    border-radius: 10px;
+    margin: 50px;
+    color: white;
+}
+.si{
+    color: green;
+    margin: 50px;
+    font-size: 50px;
+    display: inline-block;
+}
+.resetpass{
+    margin: auto;
+    padding-bottom: 20px;
+    padding-right: 150px;
+    display: block;
+}
+
+
+/* Home*/
+/* login*/
+
+.formu{
+    display:block ;
+    opacity: 0.8;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    overflow: hidden;
+}
+.full-screen img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    
+}
+.formu h1{
+    font-size: 100px;
+    margin: auto;
+    padding-bottom: 45px;
+}
+.boton{
+    width: 100%;
+    background:none;
+    color:black ;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+    
+}
+
+
+
+
+
+
+
