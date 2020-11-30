@@ -17,6 +17,10 @@ API(Solo si inicio sesion como administrador)
 
 http://127.0.0.1:8000/
 
+PythonAnywhere:
+
+http://nicolascoro.pythonanywhere.com/home/
+
 docs.google.com/spreadsheets/d/1ACv6Fthpit6wJhLimuf-8uw4U22Z2aoxF8UlxOAsps0/edit?usp=sharing
 
 
